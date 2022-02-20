@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="tire_and_rim_shopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="24" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tittle" Type="nvarchar" MaxLength="20" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="BirtDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="24" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrdersId" />
+          </Key>
+          <Property Name="OrdersId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="OrdarDate" Type="datetime2" Precision="7" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrdersDetails">
+          <Key>
+            <PropertyRef Name="OrdersDetailsId" />
+          </Key>
+          <Property Name="OrdersDetailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrdersId" Type="int" Nullable="false" />
+          <Property Name="TiresId" Type="int" />
+          <Property Name="RimsId" Type="int" />
+          <Property Name="TiresUnitPrice" Type="float" />
+          <Property Name="RimsUnitPrice" Type="float" />
+          <Property Name="TireQuantity" Type="int" />
+          <Property Name="RimsQuantity" Type="int" />
+          <Property Name="Discount" Type="float" />
+          <Property Name="Total Fee" Type="int" />
+        </EntityType>
+        <EntityType Name="Rims">
+          <Key>
+            <PropertyRef Name="RimsId" />
+          </Key>
+          <Property Name="RimsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Diameter" Type="int" Nullable="false" />
+          <Property Name="Width" Type="int" Nullable="false" />
+          <Property Name="WheelBoltSpacing" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Offset" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Material" Type="nvarchar" MaxLength="30" />
+          <Property Name="YearOfProduction" Type="smalldatetime" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="30" />
+          <Property Name="DateOfReceipt" Type="datetime" Nullable="false" />
+          <Property Name="UnıtsInStock" Type="smallint" />
+          <Property Name="ArrivalPrice" Type="money" />
+          <Property Name="SalePrice" Type="money" />
+        </EntityType>
+        <EntityType Name="Suppliers">
+          <Key>
+            <PropertyRef Name="SuppliersId" />
+          </Key>
+          <Property Name="SuppliersId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="24" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TireAndRimSuppliers">
+          <Key>
+            <PropertyRef Name="TireAndRimSuppliersId" />
+          </Key>
+          <Property Name="TireAndRimSuppliersId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SuppliersId" Type="int" />
+          <Property Name="TiresId" Type="int" />
+          <Property Name="RimsId" Type="int" />
+        </EntityType>
+        <EntityType Name="Tires">
+          <Key>
+            <PropertyRef Name="TiresId" />
+          </Key>
+          <Property Name="TiresId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Diameter" Type="int" Nullable="false" />
+          <Property Name="Thickness" Type="int" Nullable="false" />
+          <Property Name="Width" Type="int" Nullable="false" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="30" />
+          <Property Name="Season" Type="nvarchar" MaxLength="30" />
+          <Property Name="YearOfProduction" Type="smalldatetime" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="30" />
+          <Property Name="DateOfReceipt" Type="datetime" Nullable="false" />
+          <Property Name="UnıtsInStock" Type="smallint" />
+          <Property Name="ArrivalPrice" Type="money" />
+          <Property Name="SalePrice" Type="money" />
+        </EntityType>
+        <Association Name="FK_Orders_CustomerId">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdersDetails_OrdersId">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrdersDetails" Type="Self.OrdersDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrdersId" />
+            </Principal>
+            <Dependent Role="OrdersDetails">
+              <PropertyRef Name="OrdersId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdersDetails_RimsId">
+          <End Role="Rims" Type="Self.Rims" Multiplicity="0..1" />
+          <End Role="OrdersDetails" Type="Self.OrdersDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rims">
+              <PropertyRef Name="RimsId" />
+            </Principal>
+            <Dependent Role="OrdersDetails">
+              <PropertyRef Name="RimsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdersDetails_TiresId">
+          <End Role="Tires" Type="Self.Tires" Multiplicity="0..1" />
+          <End Role="OrdersDetails" Type="Self.OrdersDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tires">
+              <PropertyRef Name="TiresId" />
+            </Principal>
+            <Dependent Role="OrdersDetails">
+              <PropertyRef Name="TiresId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TireAndRimSuppliers_RimsId">
+          <End Role="Rims" Type="Self.Rims" Multiplicity="0..1" />
+          <End Role="TireAndRimSuppliers" Type="Self.TireAndRimSuppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rims">
+              <PropertyRef Name="RimsId" />
+            </Principal>
+            <Dependent Role="TireAndRimSuppliers">
+              <PropertyRef Name="RimsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TireAndRimSuppliers_SuppliersId">
+          <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+          <End Role="TireAndRimSuppliers" Type="Self.TireAndRimSuppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="SuppliersId" />
+            </Principal>
+            <Dependent Role="TireAndRimSuppliers">
+              <PropertyRef Name="SuppliersId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TireAndRimSuppliers_TiresId">
+          <End Role="Tires" Type="Self.Tires" Multiplicity="0..1" />
+          <End Role="TireAndRimSuppliers" Type="Self.TireAndRimSuppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tires">
+              <PropertyRef Name="TiresId" />
+            </Principal>
+            <Dependent Role="TireAndRimSuppliers">
+              <PropertyRef Name="TiresId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="tire_and_rim_shopModelStoreContainer">
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrdersDetails" EntityType="Self.OrdersDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rims" EntityType="Self.Rims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TireAndRimSuppliers" EntityType="Self.TireAndRimSuppliers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tires" EntityType="Self.Tires" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Orders_CustomerId" Association="Self.FK_Orders_CustomerId">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersDetails_OrdersId" Association="Self.FK_OrdersDetails_OrdersId">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrdersDetails" EntitySet="OrdersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersDetails_RimsId" Association="Self.FK_OrdersDetails_RimsId">
+            <End Role="Rims" EntitySet="Rims" />
+            <End Role="OrdersDetails" EntitySet="OrdersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersDetails_TiresId" Association="Self.FK_OrdersDetails_TiresId">
+            <End Role="Tires" EntitySet="Tires" />
+            <End Role="OrdersDetails" EntitySet="OrdersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TireAndRimSuppliers_RimsId" Association="Self.FK_TireAndRimSuppliers_RimsId">
+            <End Role="Rims" EntitySet="Rims" />
+            <End Role="TireAndRimSuppliers" EntitySet="TireAndRimSuppliers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TireAndRimSuppliers_SuppliersId" Association="Self.FK_TireAndRimSuppliers_SuppliersId">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="TireAndRimSuppliers" EntitySet="TireAndRimSuppliers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TireAndRimSuppliers_TiresId" Association="Self.FK_TireAndRimSuppliers_TiresId">
+            <End Role="Tires" EntitySet="Tires" />
+            <End Role="TireAndRimSuppliers" EntitySet="TireAndRimSuppliers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="tire_and_rim_shopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_CustomerId" FromRole="Customers" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tittle" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BirtDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrdersId" />
+          </Key>
+          <Property Name="OrdersId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="OrdarDate" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Orders_CustomerId" FromRole="Orders" ToRole="Customers" />
+          <NavigationProperty Name="OrdersDetails" Relationship="Self.FK_OrdersDetails_OrdersId" FromRole="Orders" ToRole="OrdersDetails" />
+        </EntityType>
+        <EntityType Name="OrdersDetail">
+          <Key>
+            <PropertyRef Name="OrdersDetailsId" />
+          </Key>
+          <Property Name="OrdersDetailsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrdersId" Type="Int32" Nullable="false" />
+          <Property Name="TiresId" Type="Int32" />
+          <Property Name="RimsId" Type="Int32" />
+          <Property Name="TiresUnitPrice" Type="Double" />
+          <Property Name="RimsUnitPrice" Type="Double" />
+          <Property Name="TireQuantity" Type="Int32" />
+          <Property Name="RimsQuantity" Type="Int32" />
+          <Property Name="Discount" Type="Double" />
+          <Property Name="Total_Fee" Type="Int32" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_OrdersDetails_OrdersId" FromRole="OrdersDetails" ToRole="Orders" />
+          <NavigationProperty Name="Rim" Relationship="Self.FK_OrdersDetails_RimsId" FromRole="OrdersDetails" ToRole="Rims" />
+          <NavigationProperty Name="Tire" Relationship="Self.FK_OrdersDetails_TiresId" FromRole="OrdersDetails" ToRole="Tires" />
+        </EntityType>
+        <EntityType Name="Rim">
+          <Key>
+            <PropertyRef Name="RimsId" />
+          </Key>
+          <Property Name="RimsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Diameter" Type="Int32" Nullable="false" />
+          <Property Name="Width" Type="Int32" Nullable="false" />
+          <Property Name="WheelBoltSpacing" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Offset" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Material" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="YearOfProduction" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfReceipt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UnıtsInStock" Type="Int16" />
+          <Property Name="ArrivalPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SalePrice" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="OrdersDetails" Relationship="Self.FK_OrdersDetails_RimsId" FromRole="Rims" ToRole="OrdersDetails" />
+          <NavigationProperty Name="TireAndRimSuppliers" Relationship="Self.FK_TireAndRimSuppliers_RimsId" FromRole="Rims" ToRole="TireAndRimSuppliers" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SuppliersId" />
+          </Key>
+          <Property Name="SuppliersId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TireAndRimSuppliers" Relationship="Self.FK_TireAndRimSuppliers_SuppliersId" FromRole="Suppliers" ToRole="TireAndRimSuppliers" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TireAndRimSupplier">
+          <Key>
+            <PropertyRef Name="TireAndRimSuppliersId" />
+          </Key>
+          <Property Name="TireAndRimSuppliersId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SuppliersId" Type="Int32" />
+          <Property Name="TiresId" Type="Int32" />
+          <Property Name="RimsId" Type="Int32" />
+          <NavigationProperty Name="Rim" Relationship="Self.FK_TireAndRimSuppliers_RimsId" FromRole="TireAndRimSuppliers" ToRole="Rims" />
+          <NavigationProperty Name="Supplier" Relationship="Self.FK_TireAndRimSuppliers_SuppliersId" FromRole="TireAndRimSuppliers" ToRole="Suppliers" />
+          <NavigationProperty Name="Tire" Relationship="Self.FK_TireAndRimSuppliers_TiresId" FromRole="TireAndRimSuppliers" ToRole="Tires" />
+        </EntityType>
+        <EntityType Name="Tire">
+          <Key>
+            <PropertyRef Name="TiresId" />
+          </Key>
+          <Property Name="TiresId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Diameter" Type="Int32" Nullable="false" />
+          <Property Name="Thickness" Type="Int32" Nullable="false" />
+          <Property Name="Width" Type="Int32" Nullable="false" />
+          <Property Name="Brand" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Season" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="YearOfProduction" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfReceipt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UnıtsInStock" Type="Int16" />
+          <Property Name="ArrivalPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SalePrice" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="OrdersDetails" Relationship="Self.FK_OrdersDetails_TiresId" FromRole="Tires" ToRole="OrdersDetails" />
+          <NavigationProperty Name="TireAndRimSuppliers" Relationship="Self.FK_TireAndRimSuppliers_TiresId" FromRole="Tires" ToRole="TireAndRimSuppliers" />
+        </EntityType>
+        <Association Name="FK_Orders_CustomerId">
+          <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdersDetails_OrdersId">
+          <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrdersDetails" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrdersId" />
+            </Principal>
+            <Dependent Role="OrdersDetails">
+              <PropertyRef Name="OrdersId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdersDetails_RimsId">
+          <End Role="Rims" Type="Self.Rim" Multiplicity="0..1" />
+          <End Role="OrdersDetails" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rims">
+              <PropertyRef Name="RimsId" />
+            </Principal>
+            <Dependent Role="OrdersDetails">
+              <PropertyRef Name="RimsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdersDetails_TiresId">
+          <End Role="Tires" Type="Self.Tire" Multiplicity="0..1" />
+          <End Role="OrdersDetails" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tires">
+              <PropertyRef Name="TiresId" />
+            </Principal>
+            <Dependent Role="OrdersDetails">
+              <PropertyRef Name="TiresId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TireAndRimSuppliers_RimsId">
+          <End Role="Rims" Type="Self.Rim" Multiplicity="0..1" />
+          <End Role="TireAndRimSuppliers" Type="Self.TireAndRimSupplier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rims">
+              <PropertyRef Name="RimsId" />
+            </Principal>
+            <Dependent Role="TireAndRimSuppliers">
+              <PropertyRef Name="RimsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TireAndRimSuppliers_SuppliersId">
+          <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+          <End Role="TireAndRimSuppliers" Type="Self.TireAndRimSupplier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="SuppliersId" />
+            </Principal>
+            <Dependent Role="TireAndRimSuppliers">
+              <PropertyRef Name="SuppliersId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TireAndRimSuppliers_TiresId">
+          <End Role="Tires" Type="Self.Tire" Multiplicity="0..1" />
+          <End Role="TireAndRimSuppliers" Type="Self.TireAndRimSupplier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tires">
+              <PropertyRef Name="TiresId" />
+            </Principal>
+            <Dependent Role="TireAndRimSuppliers">
+              <PropertyRef Name="TiresId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="tire_and_rim_shopEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="OrdersDetails" EntityType="Self.OrdersDetail" />
+          <EntitySet Name="Rims" EntityType="Self.Rim" />
+          <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TireAndRimSuppliers" EntityType="Self.TireAndRimSupplier" />
+          <EntitySet Name="Tires" EntityType="Self.Tire" />
+          <AssociationSet Name="FK_Orders_CustomerId" Association="Self.FK_Orders_CustomerId">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersDetails_OrdersId" Association="Self.FK_OrdersDetails_OrdersId">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrdersDetails" EntitySet="OrdersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersDetails_RimsId" Association="Self.FK_OrdersDetails_RimsId">
+            <End Role="Rims" EntitySet="Rims" />
+            <End Role="OrdersDetails" EntitySet="OrdersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersDetails_TiresId" Association="Self.FK_OrdersDetails_TiresId">
+            <End Role="Tires" EntitySet="Tires" />
+            <End Role="OrdersDetails" EntitySet="OrdersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TireAndRimSuppliers_RimsId" Association="Self.FK_TireAndRimSuppliers_RimsId">
+            <End Role="Rims" EntitySet="Rims" />
+            <End Role="TireAndRimSuppliers" EntitySet="TireAndRimSuppliers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TireAndRimSuppliers_SuppliersId" Association="Self.FK_TireAndRimSuppliers_SuppliersId">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="TireAndRimSuppliers" EntitySet="TireAndRimSuppliers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TireAndRimSuppliers_TiresId" Association="Self.FK_TireAndRimSuppliers_TiresId">
+            <End Role="Tires" EntitySet="Tires" />
+            <End Role="TireAndRimSuppliers" EntitySet="TireAndRimSuppliers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="tire_and_rim_shopModelStoreContainer" CdmEntityContainer="tire_and_rim_shopEntities">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="Tittle" ColumnName="Tittle" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="BirtDate" ColumnName="BirtDate" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="OrdersId" ColumnName="OrdersId" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="OrdarDate" ColumnName="OrdarDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrdersDetails">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.OrdersDetail">
+              <MappingFragment StoreEntitySet="OrdersDetails">
+                <ScalarProperty Name="OrdersDetailsId" ColumnName="OrdersDetailsId" />
+                <ScalarProperty Name="OrdersId" ColumnName="OrdersId" />
+                <ScalarProperty Name="TiresId" ColumnName="TiresId" />
+                <ScalarProperty Name="RimsId" ColumnName="RimsId" />
+                <ScalarProperty Name="TiresUnitPrice" ColumnName="TiresUnitPrice" />
+                <ScalarProperty Name="RimsUnitPrice" ColumnName="RimsUnitPrice" />
+                <ScalarProperty Name="TireQuantity" ColumnName="TireQuantity" />
+                <ScalarProperty Name="RimsQuantity" ColumnName="RimsQuantity" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Total_Fee" ColumnName="Total Fee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rims">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.Rim">
+              <MappingFragment StoreEntitySet="Rims">
+                <ScalarProperty Name="RimsId" ColumnName="RimsId" />
+                <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="WheelBoltSpacing" ColumnName="WheelBoltSpacing" />
+                <ScalarProperty Name="Offset" ColumnName="Offset" />
+                <ScalarProperty Name="Material" ColumnName="Material" />
+                <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="DateOfReceipt" ColumnName="DateOfReceipt" />
+                <ScalarProperty Name="UnıtsInStock" ColumnName="UnıtsInStock" />
+                <ScalarProperty Name="ArrivalPrice" ColumnName="ArrivalPrice" />
+                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.Supplier">
+              <MappingFragment StoreEntitySet="Suppliers">
+                <ScalarProperty Name="SuppliersId" ColumnName="SuppliersId" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TireAndRimSuppliers">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.TireAndRimSupplier">
+              <MappingFragment StoreEntitySet="TireAndRimSuppliers">
+                <ScalarProperty Name="TireAndRimSuppliersId" ColumnName="TireAndRimSuppliersId" />
+                <ScalarProperty Name="SuppliersId" ColumnName="SuppliersId" />
+                <ScalarProperty Name="TiresId" ColumnName="TiresId" />
+                <ScalarProperty Name="RimsId" ColumnName="RimsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tires">
+            <EntityTypeMapping TypeName="tire_and_rim_shopModel.Tire">
+              <MappingFragment StoreEntitySet="Tires">
+                <ScalarProperty Name="TiresId" ColumnName="TiresId" />
+                <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+                <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="DateOfReceipt" ColumnName="DateOfReceipt" />
+                <ScalarProperty Name="UnıtsInStock" ColumnName="UnıtsInStock" />
+                <ScalarProperty Name="ArrivalPrice" ColumnName="ArrivalPrice" />
+                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f7c493f713174118ba6a77ee3e4cd38d" Name="Diagram1">
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.Customer" Width="1.5" PointX="1.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.Employee" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.Order" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.OrdersDetail" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.Rim" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.Supplier" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.sysdiagram" Width="1.5" PointX="7.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.TireAndRimSupplier" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tire_and_rim_shopModel.Tire" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="tire_and_rim_shopModel.FK_Orders_CustomerId" ManuallyRouted="false" />
+        <AssociationConnector Association="tire_and_rim_shopModel.FK_OrdersDetails_OrdersId" ManuallyRouted="false" />
+        <AssociationConnector Association="tire_and_rim_shopModel.FK_OrdersDetails_RimsId" ManuallyRouted="false" />
+        <AssociationConnector Association="tire_and_rim_shopModel.FK_OrdersDetails_TiresId" ManuallyRouted="false" />
+        <AssociationConnector Association="tire_and_rim_shopModel.FK_TireAndRimSuppliers_RimsId" ManuallyRouted="false" />
+        <AssociationConnector Association="tire_and_rim_shopModel.FK_TireAndRimSuppliers_SuppliersId" ManuallyRouted="false" />
+        <AssociationConnector Association="tire_and_rim_shopModel.FK_TireAndRimSuppliers_TiresId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
