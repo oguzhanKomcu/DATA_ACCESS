@@ -128,6 +128,7 @@
             this.Example8.TabIndex = 4;
             this.Example8.Text = "Skip ()";
             this.Example8.UseVisualStyleBackColor = true;
+            this.Example8.Click += new System.EventHandler(this.Example8_Click);
             // 
             // Example9
             // 
@@ -147,6 +148,7 @@
             this.Example10.TabIndex = 5;
             this.Example10.Text = "Contains()";
             this.Example10.UseVisualStyleBackColor = true;
+            this.Example10.Click += new System.EventHandler(this.Example10_Click);
             // 
             // ExamplesFrom
             // 

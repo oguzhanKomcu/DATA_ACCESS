@@ -105,6 +105,27 @@ namespace DB_First
         private void Example7_Click(object sender, EventArgs e)
         {
 
+            //OrderByDescending() and OrderBy() = Orderby sorts from least to most, or sorts alphabetically (a-z).OrderByDefault, on the other hand, performs many-to-less sorting and alphabetical (z-a) sorting.
+
+            //Take() =It works like the TOP query in SQL. It returns the data at the top of the table according to the desired number.
+
+
+            dataGridView1.DataSource = db.Tires.Where(x => x.SalePrice > 2000 && x.SalePrice < 3000).OrderBy(x => x.SalePrice).Take(1).ToList();
+
+        }
+
+        private void Example8_Click(object sender, EventArgs e)
+        {
+            //Skip() => It is a method that allows us to skip the top x rows from the returned query result and show the number of rows after those rows on the screen.
+
+            dataGridView1.DataSource = db.OrdersDetails.OrderByDescending(x=> x.Total_Fee).Skip(3).Take(3).ToList();    
+        }
+
+        private void Example10_Click(object sender, EventArgs e)
+        {
+            //CONTAİNS() = It checks whether the given expression is in the specified column and returns the row of the passed data. 
+
+            dataGridView1.DataSource = db.Customers.Where(x => x.Phone.Contains("533")).ToList();
         }
     }
 }
