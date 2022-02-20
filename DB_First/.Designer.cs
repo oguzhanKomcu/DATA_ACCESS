@@ -31,7 +31,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Example1 = new System.Windows.Forms.Button();
             this.Example2 = new System.Windows.Forms.Button();
-            this.Example3 = new System.Windows.Forms.Button();
             this.Example4 = new System.Windows.Forms.Button();
             this.Example5 = new System.Windows.Forms.Button();
             this.Example6 = new System.Windows.Forms.Button();
@@ -69,15 +68,7 @@
             this.Example2.TabIndex = 1;
             this.Example2.Text = "Selected()";
             this.Example2.UseVisualStyleBackColor = true;
-            // 
-            // Example3
-            // 
-            this.Example3.Location = new System.Drawing.Point(150, 420);
-            this.Example3.Name = "Example3";
-            this.Example3.Size = new System.Drawing.Size(96, 52);
-            this.Example3.TabIndex = 1;
-            this.Example3.Text = "Selected 2";
-            this.Example3.UseVisualStyleBackColor = true;
+            this.Example2.Click += new System.EventHandler(this.Example2_Click);
             // 
             // Example4
             // 
@@ -87,6 +78,7 @@
             this.Example4.TabIndex = 1;
             this.Example4.Text = "WHERE ()";
             this.Example4.UseVisualStyleBackColor = true;
+            this.Example4.Click += new System.EventHandler(this.Example4_Click);
             // 
             // Example5
             // 
@@ -96,6 +88,7 @@
             this.Example5.TabIndex = 1;
             this.Example5.Text = "FİRST ()";
             this.Example5.UseVisualStyleBackColor = true;
+            this.Example5.Click += new System.EventHandler(this.Example5_Click);
             // 
             // Example6
             // 
@@ -105,6 +98,7 @@
             this.Example6.TabIndex = 1;
             this.Example6.Text = "FirstOrDefault ()";
             this.Example6.UseVisualStyleBackColor = true;
+            this.Example6.Click += new System.EventHandler(this.Example6_Click);
             // 
             // button1
             // 
@@ -114,6 +108,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Find () ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Example7
             // 
@@ -123,6 +118,7 @@
             this.Example7.TabIndex = 3;
             this.Example7.Text = "Take ()";
             this.Example7.UseVisualStyleBackColor = true;
+            this.Example7.Click += new System.EventHandler(this.Example7_Click);
             // 
             // Example8
             // 
@@ -141,6 +137,7 @@
             this.Example9.TabIndex = 4;
             this.Example9.Text = "Where 2 ()";
             this.Example9.UseVisualStyleBackColor = true;
+            this.Example9.Click += new System.EventHandler(this.Example9_Click);
             // 
             // Example10
             // 
@@ -164,7 +161,6 @@
             this.Controls.Add(this.Example6);
             this.Controls.Add(this.Example5);
             this.Controls.Add(this.Example4);
-            this.Controls.Add(this.Example3);
             this.Controls.Add(this.Example2);
             this.Controls.Add(this.Example1);
             this.Controls.Add(this.dataGridView1);
@@ -180,7 +176,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Example1;
         private System.Windows.Forms.Button Example2;
-        private System.Windows.Forms.Button Example3;
         private System.Windows.Forms.Button Example4;
         private System.Windows.Forms.Button Example5;
         private System.Windows.Forms.Button Example6;
