@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DB_First
+namespace CODE_FİRST
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace DB_First
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Linq_Aggregate_Function_Examples());
+            Application.Run(new Form1());
         }
     }
 }

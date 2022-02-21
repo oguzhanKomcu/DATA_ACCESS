@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DB_First
 {
-    public partial class ExamplesFrom : Form
+    public partial class Query_Examples : Form
     {
-        public ExamplesFrom()
+        public Query_Examples()
         {
             InitializeComponent();
         }
@@ -123,9 +123,42 @@ namespace DB_First
 
         private void Example10_Click(object sender, EventArgs e)
         {
-            //CONTAİNS() = It checks whether the given expression is in the specified column and returns the row of the passed data. 
+            //CONTAİNS() = It checks whether the given expression is in the specified column and returns the row of the passed data.It has case sensitivity. Be careful.In bool data type, it returns true-false.
 
             dataGridView1.DataSource = db.Customers.Where(x => x.Phone.Contains("533")).ToList();
+        }
+
+        private void btnExample11_Click(object sender, EventArgs e)
+        {
+            //StartWith() => This query returns whatever data is at the beginning of the specified expression.It has case sensitivity. Be careful.In bool data type, it returns true-false.
+            dataGridView1.DataSource = db.Employees.Where(x => x.City.StartsWith("An")).ToList();
+
+        }
+
+        private void btnExample12_Click(object sender, EventArgs e)
+        {
+            //EndsWith() => This query returns data that matches the specified expression and the end of the data.It has case sensitivity. Be careful.In bool data type, it returns true-false.
+            dataGridView1.DataSource = db.Employees.Where(x => x.City.EndsWith("bul")).ToList();
+
+        }
+
+        private void btnExample13_Click(object sender, EventArgs e)
+        {
+            // ANY() => The Any method, which has two different uses, can check whether there is a record in a table with its first use. The second use is to check whether the conditions given in the table are suitable records. Any returns a boolean(true/false) data type as a result.
+
+            bool result = db.Suppliers.Any(x => x.City == "İzmir");
+
+            if (result)
+            {
+                MessageBox.Show("There is no supplier in the city you are looking for.");
+
+            }
+            else
+            {
+                MessageBox.Show("You have a supplier in the city you are looking for.");
+
+            }
+
         }
     }
 }

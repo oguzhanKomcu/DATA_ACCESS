@@ -61,6 +61,12 @@
     <Compile Include="Employee.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Linq_Aggregate_Function_Examples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Linq_Aggregate_Function_Examples.Designer.cs">
+      <DependentUpon>Linq_Aggregate_Function_Examples.cs</DependentUpon>
+    </Compile>
     <Compile Include="Linq_To_Queries.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="TireAndRimSupplier.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Linq_Aggregate_Function_Examples.resx">
+      <DependentUpon>Linq_Aggregate_Function_Examples.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Linq_To_Queries.resx">
       <DependentUpon>Linq_To_Queries.cs</DependentUpon>
     </EmbeddedResource>

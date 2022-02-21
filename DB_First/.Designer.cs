@@ -1,6 +1,6 @@
 ﻿namespace DB_First
 {
-    partial class ExamplesFrom
+    partial class Query_Examples
     {
         /// <summary>
         /// Required designer variable.
@@ -39,6 +39,9 @@
             this.Example8 = new System.Windows.Forms.Button();
             this.Example9 = new System.Windows.Forms.Button();
             this.Example10 = new System.Windows.Forms.Button();
+            this.btnExample11 = new System.Windows.Forms.Button();
+            this.btnExample12 = new System.Windows.Forms.Button();
+            this.btnExample13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,12 +50,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(769, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(864, 322);
             this.dataGridView1.TabIndex = 0;
             // 
             // Example1
             // 
-            this.Example1.Location = new System.Drawing.Point(12, 352);
+            this.Example1.Location = new System.Drawing.Point(30, 352);
             this.Example1.Name = "Example1";
             this.Example1.Size = new System.Drawing.Size(96, 52);
             this.Example1.TabIndex = 1;
@@ -112,7 +115,7 @@
             // 
             // Example7
             // 
-            this.Example7.Location = new System.Drawing.Point(12, 488);
+            this.Example7.Location = new System.Drawing.Point(30, 488);
             this.Example7.Name = "Example7";
             this.Example7.Size = new System.Drawing.Size(96, 48);
             this.Example7.TabIndex = 3;
@@ -146,15 +149,48 @@
             this.Example10.Name = "Example10";
             this.Example10.Size = new System.Drawing.Size(87, 48);
             this.Example10.TabIndex = 5;
-            this.Example10.Text = "Contains()";
+            this.Example10.Text = "Containd()";
             this.Example10.UseVisualStyleBackColor = true;
             this.Example10.Click += new System.EventHandler(this.Example10_Click);
             // 
-            // ExamplesFrom
+            // btnExample11
+            // 
+            this.btnExample11.Location = new System.Drawing.Point(413, 488);
+            this.btnExample11.Name = "btnExample11";
+            this.btnExample11.Size = new System.Drawing.Size(96, 48);
+            this.btnExample11.TabIndex = 6;
+            this.btnExample11.Text = "StartWith()";
+            this.btnExample11.UseVisualStyleBackColor = true;
+            this.btnExample11.Click += new System.EventHandler(this.btnExample11_Click);
+            // 
+            // btnExample12
+            // 
+            this.btnExample12.Location = new System.Drawing.Point(544, 488);
+            this.btnExample12.Name = "btnExample12";
+            this.btnExample12.Size = new System.Drawing.Size(96, 48);
+            this.btnExample12.TabIndex = 6;
+            this.btnExample12.Text = "EndWith()";
+            this.btnExample12.UseVisualStyleBackColor = true;
+            this.btnExample12.Click += new System.EventHandler(this.btnExample12_Click);
+            // 
+            // btnExample13
+            // 
+            this.btnExample13.Location = new System.Drawing.Point(678, 488);
+            this.btnExample13.Name = "btnExample13";
+            this.btnExample13.Size = new System.Drawing.Size(103, 48);
+            this.btnExample13.TabIndex = 6;
+            this.btnExample13.Text = "ANY ()";
+            this.btnExample13.UseVisualStyleBackColor = true;
+            this.btnExample13.Click += new System.EventHandler(this.btnExample13_Click);
+            // 
+            // Query_Examples
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 662);
+            this.Controls.Add(this.btnExample13);
+            this.Controls.Add(this.btnExample12);
+            this.Controls.Add(this.btnExample11);
             this.Controls.Add(this.Example10);
             this.Controls.Add(this.Example9);
             this.Controls.Add(this.Example8);
@@ -166,7 +202,7 @@
             this.Controls.Add(this.Example2);
             this.Controls.Add(this.Example1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "ExamplesFrom";
+            this.Name = "Query_Examples";
             this.Text = "Query_Examples";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -186,6 +222,9 @@
         private System.Windows.Forms.Button Example8;
         private System.Windows.Forms.Button Example9;
         private System.Windows.Forms.Button Example10;
+        private System.Windows.Forms.Button btnExample11;
+        private System.Windows.Forms.Button btnExample12;
+        private System.Windows.Forms.Button btnExample13;
     }
 }
 
