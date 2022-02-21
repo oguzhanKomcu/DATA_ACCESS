@@ -21,10 +21,12 @@ Code First =  This method is a method that we perform by starting to create our 
 
 ## SELECT OPERATİONS WİTH ENTİTY FRAMEWORK
 Using the Entity Framework library, we can filter the data by making queries on a table in our database. Almost all the queries you can do on T-SQL can be done with Entity Framework. 
+
 Here I have shown the basic select operations. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/DB_First/Linq_To_Queries.cs).
 
 ## USING AGGREGATE FUNCTİON WİTH ENTİTY FRAMEWORK
 You can also use the integrated functions of T-SQL queries and reporting with the Entity Framework library.
+
 Here I showed our basic aggregate functions. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/DB_First/Linq_Aggregate_Function_Examples.cs).
 
 
