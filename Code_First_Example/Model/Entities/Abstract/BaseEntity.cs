@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Code_First_Example.Model.Entities.Abstract
 {
     public enum Status { Active = 1, Modified = 2, Passive = 3 }
-    public  class BaseEntity
+    public abstract class BaseEntity
     {
 
 

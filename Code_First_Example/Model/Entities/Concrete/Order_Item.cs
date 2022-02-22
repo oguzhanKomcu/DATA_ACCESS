@@ -14,11 +14,11 @@ namespace Code_First_Example.Model.Entities.Concrete
     public  class Order_Item : BaseEntity
     {
 
-        [ForeignKey("Orders")]
+        [ForeignKey("Order")]
         public int Order_Id { get; set; }
         public virtual Order Order { get; set; }
 
-        [ForeignKey("Products")]
+        [ForeignKey("Product")]
         public int Product_Id { get; set; }
         public virtual Product Product { get; set; }
 

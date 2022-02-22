@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Code_First_Example.Model.Entities.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace Code_First_Example.Model.Entities.Concrete
 {
     [Table("Employees")]
-    public class Employee
+    public class Employee :BaseEntity
     {
 
         [Required]    

@@ -14,11 +14,11 @@ namespace Code_First_Example.Model.Entities.Concrete
     {
 
       
-        [ForeignKey("Customers")]
+        [ForeignKey("Customer")]
         public int Customer_Id { get; set; }
         public virtual Customer Customer { get; set; }
 
-        [ForeignKey("Employees")]
+        [ForeignKey("Employee")]
         public int Employee_Id { get; set; }
         public virtual Employee Employee { get; set; }
 

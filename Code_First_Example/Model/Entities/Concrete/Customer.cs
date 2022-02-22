@@ -29,7 +29,7 @@ namespace Code_First_Example.Model.Entities.Concrete
         [Required]
         public string Address { get; set; }
 
-        public virtual List<Order> Orders { get; set; }
+       
 
 
 
