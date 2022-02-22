@@ -1,4 +1,5 @@
-﻿using CODE_FİRST.Model.Entities.Abstract;
+﻿
+using Code_First.Model.Entities.Abstract;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CODE_FİRST.Model.Entities.Concrete
+namespace Code_First.Model.Entities.Concrete
 {
     [Table("Customers")]
     public class Customer : BaseEntity

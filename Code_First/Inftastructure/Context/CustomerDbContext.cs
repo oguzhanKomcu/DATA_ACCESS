@@ -1,4 +1,4 @@
-﻿using CODE_FİRST.Model.Entities.Concrete;
+﻿using Code_First.Model.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CODE_FİRST.Inftastructure.Context
+namespace Code_First.Inftastructure.Context
 {
 
     public class CustomerDbContext : DbContext 

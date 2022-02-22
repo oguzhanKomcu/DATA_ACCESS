@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CODE_FİRST.Model.Entities.Abstract
+namespace Code_First.Model.Entities.Abstract
 {
 
     public enum Status { Active = 1, Modified = 2, Passive }  //We created our sequencing outside of the class. Otherwise we would get an error.
