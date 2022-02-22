@@ -19,7 +19,7 @@ namespace Code_First.Inftastructure.Context
 
             //We are creating our database while starting our constructor, that is, our class.
             //Pay attention to the server name.
-            Database.Connection.ConnectionString = @"Server= DESKTOP-97DV3CH\SQLEXPRESS; Database = CustomerDb;Integrated Security = true";
+            Database.Connection.ConnectionString = @"Server= DESKTOP-97DV3CH\SQLEXPRESS; Database = CustomerDb;Integrated Security=True;";
 
         }
 

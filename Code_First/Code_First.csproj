@@ -63,6 +63,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Inftastructure\Context\CustomerDbContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Entities\Abstract\BaseEntity.cs" />
     <Compile Include="Model\Entities\Concrete\Contact.cs" />
     <Compile Include="Model\Entities\Concrete\Customer.cs" />
