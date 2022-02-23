@@ -32,7 +32,7 @@ namespace Code_First_Example.Inftastructure.Context
         public DbSet<Order_Item> Order_Items { get; set; }
         public DbSet<Product> Products { get; set; }
 
-        //enable-migrations
+       
 
 
     }

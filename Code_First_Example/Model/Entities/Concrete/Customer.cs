@@ -35,12 +35,5 @@ namespace Code_First_Example.Model.Entities.Concrete
 
 
 
-
-
-
-
-
-
-
     }
 }
