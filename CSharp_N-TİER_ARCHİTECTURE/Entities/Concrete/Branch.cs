@@ -1,11 +1,12 @@
-﻿using CSharp_N_TİER_ARCHİTECTURE.Entities.Abstract;
+﻿
+using BankDatabase_Project.Models.Entities.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_N_TİER_ARCHİTECTURE.Entities.Concrete
+namespace BankDatabase_Project.Models.Entities.Concrete
 {
     public class Branch : BaseEntity
     {
@@ -14,7 +15,7 @@ namespace CSharp_N_TİER_ARCHİTECTURE.Entities.Concrete
         public string Branch_Location { get; set; }
 
 
-
+       public virtual List<Loan> Loan { get; set;}
 
 
     }

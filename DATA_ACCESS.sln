@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code_First", "Code_First\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Code_First_Example", "Code_First_Example\Code_First_Example.csproj", "{BE19A7A4-66BC-4976-BB47-59416032D053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp_N-TİER_ARCHİTECTURE", "CSharp_N-TİER_ARCHİTECTURE\CSharp_N-TİER_ARCHİTECTURE.csproj", "{8AD81F6B-878B-447E-A6EC-B96D2AD08367}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankDatabase_Project.Models", "CSharp_N-TİER_ARCHİTECTURE\BankDatabase_Project.Models.csproj", "{8AD81F6B-878B-447E-A6EC-B96D2AD08367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankDatabase_Project.Infrastructure", "CSharp_N-TIER_ARCHITECTURE_2\BankDatabase_Project.Infrastructure.csproj", "{0FC39437-71B2-490F-B774-297E9716071D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8AD81F6B-878B-447E-A6EC-B96D2AD08367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AD81F6B-878B-447E-A6EC-B96D2AD08367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AD81F6B-878B-447E-A6EC-B96D2AD08367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FC39437-71B2-490F-B774-297E9716071D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC39437-71B2-490F-B774-297E9716071D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC39437-71B2-490F-B774-297E9716071D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC39437-71B2-490F-B774-297E9716071D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,11 +1,12 @@
-﻿using CSharp_N_TİER_ARCHİTECTURE.Enums;
+﻿
+using CSharp_N_TİER_ARCHİTECTURE.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_N_TİER_ARCHİTECTURE.Entities.Abstract
+namespace BankDatabase_Project.Models.Entities.Abstract
 {
     public abstract class BaseEntity
     {

@@ -1,4 +1,5 @@
-﻿using CSharp_N_TİER_ARCHİTECTURE.Entities.Abstract;
+﻿
+using BankDatabase_Project.Models.Entities.Abstract;
 using CSharp_N_TİER_ARCHİTECTURE.Enums;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_N_TİER_ARCHİTECTURE.Entities.Concrete
+namespace BankDatabase_Project.Models.Entities.Concrete
 {
     public class Account : BaseEntity
     {
@@ -20,6 +21,8 @@ namespace CSharp_N_TİER_ARCHİTECTURE.Entities.Concrete
         public string Account_Type { get; set; }
         public string Currency { get; set; }
 
+        public virtual List<Transaction> Transaction { get; set; }
 
+        
     }
 }
