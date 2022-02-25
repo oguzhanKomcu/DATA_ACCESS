@@ -43,3 +43,13 @@ I have created a vir database that you can use here.
 
 You can check it out here. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/Code_First_Example).
 
+##  N-TİER ARCHİTECTURE
+It is a structure that makes our Layered Architecture projects more organized, increases the readability of the code, increases teamwork, and makes error management easier. In fact, with this structure, we have made project writing a standard. As this structure consists of 3 main layers, it can be called a Multi-Layer Architecture structure today. But it actually rests on 3 main layers. These layers are;
+
+-- Data Layer 
+-- Business Layer 
+-- Presentation Layer 
+
+I showed our data layer example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankDb_Project.Models).
+
+I showed our business layer  example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankDb_Project.Infrastructure).
