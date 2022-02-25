@@ -25,7 +25,7 @@ namespace BankDb_Project.Infrastructure.EntityTypeConfiguration.Concrete
 
             Property(x=> x.Loan_Amount).IsRequired();
 
-            Property(x => x.Date_Issued).IsRequired();
+            Property(x => x.Date_Issued).HasColumnType("datetime2").IsRequired();
 
 
 

@@ -9,7 +9,7 @@ namespace BankDb_Project.Models.Enums
     public enum  Status
     {
         Active = 1,
-        Modifies = 2,
+        Modified = 2,
         Passive = 3
 
 

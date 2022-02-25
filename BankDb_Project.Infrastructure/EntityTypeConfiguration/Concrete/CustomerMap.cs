@@ -16,7 +16,8 @@ namespace BankDb_Project.Infrastructure.EntityTypeConfiguration.Concrete
             Property(x => x.First_Name).IsRequired();
             Property(x => x.Last_Name).IsRequired();
 
-            Property(x => x.Mobile_No).IsRequired(); 
+
+            Property(x => x.Mobile_No).HasMaxLength(11).IsRequired();
             Property(x => x.Home_Address).IsRequired();
             Property(x => x.Business_Address).IsRequired();
             Property(x => x.City).IsRequired();
