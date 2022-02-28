@@ -10,4 +10,8 @@
     <PackageReference Include="EntityFramework" Version="6.4.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BankaDatabase_Project.Models\BankaDatabase_Project.Models.csproj" />
+  </ItemGroup>
+
 </Project>

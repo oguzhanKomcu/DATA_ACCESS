@@ -1,7 +1,7 @@
-﻿using BankDb_Project.Infrastructure.Repositories.Abstract;
-using BankDb_Project.Infrastructure.Repositories.Interface;
-using BankDb_Project.Models.Entities.Concrete;
-using BankDb_Project.Models.Enums;
+﻿using BankaDatabase_Project.Models.Entities.Concrete;
+using BankaDatabase_Project.Models.Enums;
+using BankDatabase_Project.Infrastructure.Repositories.Abstract;
+using BankDatabase_Project.Infrastructure.Repositories.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankDb_Project.Infrastructure.Repositories.Concrete
+namespace BankDatabase_Project.Infrastructure.Repositories.Concrete
 {
     public class CustomerRepository : KernelRepository, IBaseRepository<Customer>
     {

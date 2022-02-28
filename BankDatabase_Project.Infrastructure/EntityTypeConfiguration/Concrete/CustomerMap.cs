@@ -1,12 +1,12 @@
-﻿using BankDb_Project.Infrastructure.EntityTypeConfiguration.Abstract;
-using BankDb_Project.Models.Entities.Concrete;
+﻿using BankaDatabase_Project.Models.Entities.Concrete;
+using BankDatabase_Project.Infrastructure.EntityTypeConfiguration.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankDb_Project.Infrastructure.EntityTypeConfiguration.Concrete
+namespace BankDatabase_Project.Infrastructure.EntityTypeConfiguration.Concrete
 {
     public class CustomerMap : BaseMap<Customer>
     {
@@ -34,5 +34,7 @@ namespace BankDb_Project.Infrastructure.EntityTypeConfiguration.Concrete
 
 
         }
+
+
     }
 }
