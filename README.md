@@ -50,6 +50,6 @@ It is a structure that makes our Layered Architecture projects more organized, i
 -- Business Layer 
 -- Presentation Layer 
 
-I showed our data layer example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankDb_Project.Models).
+I showed our data layer example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankaDatabase_Project.Models).
 
-I showed our business layer  example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankDb_Project.Infrastructure).
+I showed our business layer  example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankDatabase_Project.Infrastructure).
