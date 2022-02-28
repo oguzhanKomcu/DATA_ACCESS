@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankDatabase_Project.UserInterface_UI_.AdminArea
+namespace BankDatabase_Project.UserInterface
 {
-    public partial class Home_Page : Form
+    public partial class Form1 : Form
     {
-        public Home_Page()
+        public Form1()
         {
             InitializeComponent();
         }

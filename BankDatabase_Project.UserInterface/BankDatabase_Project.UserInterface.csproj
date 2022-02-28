@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F4A6266-93C5-4494-8CA3-EBF0675EA6A1}</ProjectGuid>
+    <ProjectGuid>{EECDE2E8-41B3-4BE3-95A4-A4A8393C930F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>BankDatabase_Project.UserInterface_UI_</RootNamespace>
-    <AssemblyName>BankDatabase_Project.UserInterface%28UI%29</AssemblyName>
+    <RootNamespace>BankDatabase_Project.UserInterface</RootNamespace>
+    <AssemblyName>BankDatabase_Project.UserInterface</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,22 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account_Page.Designer.cs">
+      <DependentUpon>Account_Page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Account_Page.resx">
+      <DependentUpon>Account_Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +103,5 @@
       <Name>BankDatabase_Project.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

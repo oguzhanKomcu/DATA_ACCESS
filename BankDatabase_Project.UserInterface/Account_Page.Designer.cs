@@ -1,4 +1,4 @@
-﻿namespace BankDatabase_Project.UserInterface_UI_
+﻿namespace BankDatabase_Project.UserInterface
 {
     partial class Account_Page
     {
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Account_Page
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Account_Page";
             this.Text = "Account_Page";
+            this.Load += new System.EventHandler(this.Account_Page_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

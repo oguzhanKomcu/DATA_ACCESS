@@ -1,6 +1,6 @@
-﻿namespace BankDatabase_Project.UserInterface_UI_.AdminArea
+﻿namespace BankDatabase_Project.UserInterface_UI_
 {
-    partial class Account_Page
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Account_Page";
+            this.Text = "Form2";
         }
 
         #endregion
