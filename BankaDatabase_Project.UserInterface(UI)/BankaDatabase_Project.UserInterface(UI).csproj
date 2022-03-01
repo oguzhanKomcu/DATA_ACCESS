@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>BankaDatabase_Project.UserInterface_UI_</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BankaDatabase_Project.Models\BankaDatabase_Project.Models.csproj" />
+    <ProjectReference Include="..\BankDatabase_Project.Infrastructure\BankDatabase_Project.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

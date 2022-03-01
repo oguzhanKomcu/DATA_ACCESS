@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankaDatabase_Project.Models.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,18 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankDatabase_Project.UserInterface
+namespace BankaDatabase_Project.UserInterface_UI_.AdminArea
 {
-    public partial class Account_Page : Form
+    public partial class Home_Page : Form
     {
-        public Account_Page()
+        public Home_Page()
         {
             InitializeComponent();
         }
 
-        private void Account_Page_Load(object sender, EventArgs e)
+        private void Home_Page_Load(object sender, EventArgs e)
         {
-            Account
+            Customer
         }
     }
 }
