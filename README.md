@@ -53,3 +53,47 @@ It is a structure that makes our Layered Architecture projects more organized, i
 I showed our data layer example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankaDatabase_Project.Models).
 
 I showed our business layer  example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankDatabase_Project.Infrastructure).
+
+
+## DAPPER
+
+Dapper is a micro ORM tool developed by Stackoverflow that supports many databases. Since orm tools do a lot of things themselves, this causes them to run a bit slow. It is not preferred especially in ports with heavy traffic. Dapper may be preferred in such cases. It is a single "dll". So what is an interface for mapping? It also does not need any configuration files. In short, it is simple and fast. Released as open source on Github and continues to be developed.
+
+## AVANTAGE AND DİSAVANTAGE
+### AVANTAGE
+ 
+ --The most important feature of Dapper is its very good performance. Most of the time, it is preferred because of this advantage.
+ 
+ --You can easily execute your queries and bind the returned result to an object easily.
+ 
+### DİSAVANTAGE
+
+ --The most important disadvantage is that since the queries are written inline, they are quite prone to mistakes. This should be paid attention to. Worse, these errors occur in run-time, not in build-time.
+ 
+ --In Dapper, we do most of the things. The developer has to do the database, our queries, our assets on the program side, and the status of the objects. This greatly increases the development and maintenance costs during the development stages of large projects.
+ 
+## HOW DAPPER WORKS?
+
+I tried to use 2 methods in this repository. I worked with my procedures in Sql in one repository, and in my other repository by writing my queries directly on the program.
+
+### Stored Procedure 
+
+ -- First I created the database in SQL.
+ 
+ -- Afterwards, I made my procedures suitable for the methods I will use in my program. You can look from here. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/dapperCrud.sql)
+ 
+ --In my program I also created my layers and assets, my repositories that I will use with my procedures. The important thing here is to give my procedures and the parameters that I will use in it correctly. Otherwise, we will get a lot of errors. You can look from here. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/Dapper_BankDb_Project.Intfrastructure/Repositories/Concrete/CustomerRepository.cs)
+ 
+ -- I created the connection with the database with "connection". You can look from here. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/Dapper_BankDb_Project.Intfrastructure/Repositories/Abstract/KernelRepository.cs)
+ 
+ --  I created my latest user interface and did my desired actions. You can look from here. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/Dapper_BankDb_Project.UserInterface/CustomerCrud.cs)
+ 
+### WORKING BY WRITE A QUERY
+
+Here, I wrote my queries that will run the operation I want directly in Sql. It is really necessary to be very careful while writing the queries here. An error can waste a lot of time. As for the parameters, and the matching values of the parameters in the query must be correct. But for me, Exceptions are pretty self explanatory in Dapper. It's really helpful to find fault easily.
+
+You can look from here. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/Dapper_BankDb_Project.Intfrastructure/Repositories/Concrete/AccountRepository.cs)
+
+Here, I have shown my actions in the user interface.
+
+You can look from here. [GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/Dapper_BankDb_Project.UserInterface/AccountCrud.cs)
