@@ -50,10 +50,11 @@ It is a structure that makes our Layered Architecture projects more organized, i
 -- Business Layer 
 -- Presentation Layer 
 
-I showed our data layer example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankaDatabase_Project.Models).
+Here I created my entities corresponding to my database.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankaDatabase_Project.Models/Entities).
 
-I showed our business layer  example here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankDatabase_Project.Infrastructure).
+Here I created my infrastructure layer.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/tree/master/BankDatabase_Project.Infrastructure).
 
+I created my UI here.[GitHub Pages](https://github.com/oguzhanKomcu/DATA_ACCESS/blob/master/BankaDatabase_Project.UserInterface(UI)/AccountCrud.cs).
 
 ## DAPPER
 
