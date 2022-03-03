@@ -14,7 +14,7 @@ namespace BankaDatabase_Project.Models.Entities.Concrete
         public virtual Customer Customer { get; set; }
 
         public int Balance { get; set; }
-        public Status Account_Status { get; set; }
+        public string Account_Status { get; set; }
 
         public string Account_Type { get; set; }
         public string Currency { get; set; }
