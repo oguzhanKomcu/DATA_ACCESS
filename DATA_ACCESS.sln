@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankDatabase_Project.Infras
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankaDatabase_Project.Models", "BankaDatabase_Project.Models\BankaDatabase_Project.Models.csproj", "{03C289F9-3111-482B-9D78-7E3F5DE7ECBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankaDatabase_Project.UserInterface(UI)", "BankaDatabase_Project.UserInterface(UI)\BankaDatabase_Project.UserInterface(UI).csproj", "{5DA755ED-5701-44B9-B1E1-CCAEAD3A781E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankaDatabase_Project.UserInterface(UI)", "BankaDatabase_Project.UserInterface(UI)\BankaDatabase_Project.UserInterface(UI).csproj", "{5DA755ED-5701-44B9-B1E1-CCAEAD3A781E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_BankDb_Project.Intfrastructure", "Dapper_BankDb_Project.Intfrastructure\Dapper_BankDb_Project.Intfrastructure.csproj", "{F6D104A4-360E-4D36-B2F7-FBF1570AF1F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_BankDb_Project.Models", "Dapper_BankDb_Project.Models\Dapper_BankDb_Project.Models.csproj", "{05ED2152-8ABC-4988-B6DA-A7A853092E72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_BankDb_Project.UserInterface", "Dapper_BankDb_Project.UserInterface\Dapper_BankDb_Project.UserInterface.csproj", "{89220282-5639-4327-844A-31C749F8F9B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{5DA755ED-5701-44B9-B1E1-CCAEAD3A781E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DA755ED-5701-44B9-B1E1-CCAEAD3A781E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DA755ED-5701-44B9-B1E1-CCAEAD3A781E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6D104A4-360E-4D36-B2F7-FBF1570AF1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6D104A4-360E-4D36-B2F7-FBF1570AF1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6D104A4-360E-4D36-B2F7-FBF1570AF1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D104A4-360E-4D36-B2F7-FBF1570AF1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05ED2152-8ABC-4988-B6DA-A7A853092E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05ED2152-8ABC-4988-B6DA-A7A853092E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05ED2152-8ABC-4988-B6DA-A7A853092E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05ED2152-8ABC-4988-B6DA-A7A853092E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89220282-5639-4327-844A-31C749F8F9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89220282-5639-4327-844A-31C749F8F9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89220282-5639-4327-844A-31C749F8F9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89220282-5639-4327-844A-31C749F8F9B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

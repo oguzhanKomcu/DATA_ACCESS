@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dapper_BankDb_Project.Intfrastructure\Dapper_BankDb_Project.Intfrastructure.csproj" />
+    <ProjectReference Include="..\Dapper_BankDb_Project.Models\Dapper_BankDb_Project.Models.csproj" />
+  </ItemGroup>
+
+</Project>
