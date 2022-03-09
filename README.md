@@ -3,7 +3,7 @@ I have created my examples of data access topics in this repository. I have exam
 
 ## ORM (Object Relational Mapping)
 
-<img src="https://user-images.githubusercontent.com/96787308/157539568-20ee2449-ebb0-464e-a47f-4082fb781a3e.png" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/96787308/157539568-20ee2449-ebb0-464e-a47f-4082fb781a3e.png" width="600" height="300">
 
 It is a tool that acts as a bridge between a relational database and object-oriented programming (OOP). This bridge is a structure where we use our object models to manage our information in the relational database. In short, it is a framework developed by Microsoft that connects our objects to the database and exchanges data for us.
 
